@@ -8,7 +8,10 @@ class Book
     @title = title
   end
   
-  def genre=()
+  def genre=(genre)
+    @genre=genre
+    GENRES.push(genre) unless GENRES.include?(genre)
+  end
 
   def turn_page
     puts "Flipping the page...wow, you read fast!"
